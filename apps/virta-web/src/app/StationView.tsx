@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useQuery, gql } from 'urql';
 
-import debounce from 'lodash-es/debounce';
+import { debounce } from 'lodash';
 
 import L from 'leaflet';
 import iconImage from 'leaflet/dist/images/marker-icon.png';
