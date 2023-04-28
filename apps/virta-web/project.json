@@ -52,7 +52,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "virta-web:build",
-        "hmr": true
+        "hmr": true,
+        "proxyConfig": "apps/virta-web/proxy.conf.json"
       },
       "configurations": {
         "development": {

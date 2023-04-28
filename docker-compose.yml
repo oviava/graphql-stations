@@ -1,0 +1,28 @@
+
+version: "3.9"
+services:
+  api:
+    build: 
+      context: ./
+      dockerfile: ./docker/virta-api/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: 'mysql'
+      DB_USER: 'root'
+      DB_PASS: 'root'
+      DB_NAME: 'virta'
+  web:
+    build: 
+      context: ./
+      dockerfile: ./docker/virta-web/Dockerfile
+    ports:
+      - "80:80"
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: virta
+      MYSQL_TCP_PORT: 3306
+    ports:
+      - "3306:3306"

@@ -1,16 +1,9 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from "./app.module.scss";
-
-import NxWelcome from "./nx-welcome";
+import { StationsView } from './StationView';
+import './app.module.scss';
 
 export function App() {
-  return (
-    <>
-      <NxWelcome title="virta-web" />
-
-      <div />
-    </>
-  );
+  return <StationsView />;
 }
 
 export default App;
